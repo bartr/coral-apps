@@ -1,0 +1,7 @@
+template: voe-service
+deployments:
+  development:
+    target: dev
+    clusters: 0
+    values:
+      port: 8080

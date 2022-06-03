@@ -1,0 +1,8 @@
+template: imdb-service
+deployments:
+  development:
+    target: dev
+    clusters: 0
+    values:
+      image: ghcr.io/cse-labs/imdb-app:latest
+      port: 8080
