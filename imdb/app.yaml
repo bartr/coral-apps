@@ -1,4 +1,4 @@
-template: imdb-service
+template: pib-service
 deployments:
   development:
     target: dev
