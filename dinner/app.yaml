@@ -6,6 +6,6 @@ deployments:
     values:
       image: ghcr.io/cse-labs/go-vote:latest
       port: 8080
-      title: "Dogz Rulez!"
-      key1: Dogs
-      key2: Cats
+      title: "What's for dinner?"
+      key1: Steak
+      key2: Chicken
