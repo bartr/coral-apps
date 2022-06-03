@@ -1,0 +1,11 @@
+template: pib-service
+deployments:
+  development:
+    target: dev
+    clusters: 0
+    values:
+      image: ghcr.io/cse-labs/go-vote:latest
+      port: 8080
+      title: "Dogz Rulez!"
+      key1: Dogs
+      key2: Cats
