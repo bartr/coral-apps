@@ -1,0 +1,7 @@
+target: dev
+name: imdb
+namespace: imdb
+workspace: imdb
+imageName: ghcr.io/cse-labs/imdb-app
+imageTag: latest
+targets: [ region:west ]

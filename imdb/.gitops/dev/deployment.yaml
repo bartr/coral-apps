@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{gitops.name}}
+  namespace: {{gitops.namespace}}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{gitops.name}}
+  template:
+    metadata:
+      # annotations:
+      #   prometheus.io/scrape: "true"
+      #   prometheus.io/path: /metrics
+      #   prometheus.io/port: "{{port}}"
+    spec:
+      containers:
+      - name: {{gitops.name}}
+        image: {{gitops.imageName}}:{{gitops.imageTag}}
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+        resources:
+          limits:
+            cpu: 1
+            memory: 1G
+        readinessProbe:
+          httpGet:
+            path: /healthz
+            port: 8080
+          initialDelaySeconds: 10
+          periodSeconds: 10
