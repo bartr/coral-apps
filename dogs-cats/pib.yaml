@@ -1,0 +1,12 @@
+template: vote-service
+target: dev
+app: dogs-cats
+name: dogs-cats
+workspace: dogs-cats
+image: ghcr.io/cse-labs/go-vote:latest
+nodePort: 30080
+port: 8080
+targets: [ region:central ]
+title: Dogs Rule!
+key1: Dogs
+key2: Cats
